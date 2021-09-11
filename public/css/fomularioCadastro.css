@@ -1,0 +1,40 @@
+body {
+  background-color: #f6f7f1;
+}
+
+
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  width: 10%;
+  border: 2px solid #898989;
+  border-radius: 10px;
+  background-color: #ffb0b0;
+}
+
+main .formCadastro {
+  width: 20%;
+}
+
+#buttonLogin {
+  color: #5d5d5d;
+  text-decoration: underline;
+}
+
+#buttonLogin:hover {
+  color: #1d1d1d;
+}
+
+.botaoCadastro {
+  background-color: #e47599;
+  border: 1px #e25f89 solid;
+}
+
+.botaoCadastro:hover {
+  border: 1px #e25f89 solid;
+  background-color: #e94a7c;
+}

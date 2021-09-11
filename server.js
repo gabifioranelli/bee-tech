@@ -16,7 +16,7 @@ app.use(express.json());
 
 const cadastro_router = require("./routers/cadastro-router");
 
-app.use("/cadastro", cadastro_router);
+app.use("/", cadastro_router);
 
 app.get("/", (req, res) => {
   res.send("página principal");
