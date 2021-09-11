@@ -3,8 +3,10 @@ const router = express.Router();
 
 const cadastroController = require("../controllers/cadastro-controller");
 
-router.get("/cadastrarLivros", cadastroController.cadastrar_usuario_get);
+router.get("/home", cadastroController.listar_usuario);
 
-router.post("/cadastrarLivros", cadastroController.cadastrar_usuario_post);
+router.get("/cadastro", cadastroController.cadastrar_usuario_get);
+
+router.post("/cadastro", cadastroController.cadastrar_usuario_post);
 
 module.exports = router;

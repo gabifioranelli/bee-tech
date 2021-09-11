@@ -1,4 +1,12 @@
-<%- include("../partials/header"); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
   <section class="container mt-5 border border-dark rounded">
     <div class="row">
       <div class="col">
@@ -20,15 +28,15 @@
             </tr>
           </thead>
           <tbody>
-            <% if(lista_livros == "") { %>
+            <% if(listar_usuario == "") { %>
               <tr>
                 <td colspan="4" class="alert alert-warning">Não há produtos cadastrados</td>
               </tr>
-            <% } else {lista_livros.forEach(function(livro){ %>
+            <% } else {listar_usuario.forEach(function(usuario){ %>
               <tr>
-                <td><%= livro.nome %></td>
-                <td><%= livro.autor %></td>
-                <td><%= livro.codigoBarras %></td>
+                <td><%= usuario.nome %></td>
+                <td><%= usuario.autor %></td>
+                <td><%= usuario.codigoBarras %></td>
                 <td>
                   <a href="biblioteca/editarLivro/<%= livro._id %>" class="btn btn-outline-warning btn-sm">Editar</a>
                   <a href="biblioteca/deletarLivro/<%= livro._id %>" class="btn btn-outline-danger btn-sm">Deletar</a>
@@ -40,4 +48,5 @@
       </div>
     </div>
   </section>
-<%- include("../partials/footer"); %>
+</body>
+</html>

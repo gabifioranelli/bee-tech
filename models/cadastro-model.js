@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
-const Cadastro = mongoose.model("usuarios", {
+const Usuario = mongoose.model("usuarios", {
   nome: String,
   cpf: Number,
-  email: Number,
+  email: String,
   senha: Number
 });
 
-module.exports = Cadastro;
+module.exports = Usuario;
