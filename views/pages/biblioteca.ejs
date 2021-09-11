@@ -1,0 +1,43 @@
+<%- include("../partials/header"); %>
+  <section class="container mt-5 border border-dark rounded">
+    <div class="row">
+      <div class="col">
+        <div class="row mt-5">
+          <div class="col-6">
+            <h1>Livros Catalogados</h1>
+            <div class="col-6">
+              <a href="biblioteca/cadastrarLivros" class="btn btn-outline-secondary mb-2 mt-5">Inserir Livros</a>
+            </div>
+          </div>
+        </div>
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th>Nome</th>
+              <th>Autor</th>
+              <th>Código de Barras</th>
+              <th>Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% if(lista_livros == "") { %>
+              <tr>
+                <td colspan="4" class="alert alert-warning">Não há produtos cadastrados</td>
+              </tr>
+            <% } else {lista_livros.forEach(function(livro){ %>
+              <tr>
+                <td><%= livro.nome %></td>
+                <td><%= livro.autor %></td>
+                <td><%= livro.codigoBarras %></td>
+                <td>
+                  <a href="biblioteca/editarLivro/<%= livro._id %>" class="btn btn-outline-warning btn-sm">Editar</a>
+                  <a href="biblioteca/deletarLivro/<%= livro._id %>" class="btn btn-outline-danger btn-sm">Deletar</a>
+                </td>
+              </tr>
+            <% })} %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+<%- include("../partials/footer"); %>
