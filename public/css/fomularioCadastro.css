@@ -1,40 +1,106 @@
-body {
-  background-color: #f6f7f1;
+header {
+  background-color: red;
+  padding-top: 5px;
 }
 
+.breadcrumb {
+  background-color: red;
+}
 
-.formCadastro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  margin-top: 40px;
+body{
+  background-color: #ffdede;
+}
+
+.registration-form{
+padding: 50px 0;
+}
+
+.registration-form form{
+  background-color: #fff;
+  max-width: 600px;
+  margin: auto;
+  padding: 50px 70px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.registration-form .form-icon{
+text-align: center;
+  background-color: #ff5858;
+  border-radius: 50%;
+  font-size: 40px;
+  color: white;
+  width: 100px;
+  height: 100px;
+  margin: auto;
   margin-bottom: 50px;
-  width: 10%;
-  border: 2px solid #898989;
-  border-radius: 10px;
-  background-color: #ffb0b0;
+  line-height: 100px;
 }
 
-main .formCadastro {
-  width: 20%;
+.registration-form .item{
+border-radius: 20px;
+  margin-bottom: 25px;
+  padding: 10px 20px;
 }
 
-#buttonLogin {
-  color: #5d5d5d;
-  text-decoration: underline;
+.registration-form .create-account{
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ff5757;
+  border: none;
+  color: white;
+  margin-top: 20px;
 }
 
-#buttonLogin:hover {
-  color: #1d1d1d;
+.registration-form .social-media{
+  max-width: 600px;
+  background-color: #fff;
+  margin: auto;
+  padding: 35px 0;
+  text-align: center;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: #ca9f9f;
+  border-top: 1px solid #ffdede;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
 }
 
-.botaoCadastro {
-  background-color: #e47599;
-  border: 1px #e25f89 solid;
+.registration-form .social-icons{
+  margin-top: 30px;
+  margin-bottom: 16px;
 }
 
-.botaoCadastro:hover {
-  border: 1px #e25f89 solid;
-  background-color: #e94a7c;
+.registration-form .social-icons a{
+  font-size: 23px;
+  margin: 0 3px;
+  color: #ff5656;
+  border: 1px solid;
+  border-radius: 50%;
+  width: 45px;
+  display: inline-block;
+  height: 45px;
+  text-align: center;
+  background-color: #fff;
+  line-height: 45px;
+}
+
+.registration-form .social-icons a:hover{
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+@media (max-width: 576px) {
+  .registration-form form{
+      padding: 50px 20px;
+  }
+
+  .registration-form .form-icon{
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+      line-height: 70px;
+  }
 }

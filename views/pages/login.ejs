@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>Login</title>
+  <style>
+
+    input {
+      background-color: none;
+      outline: none;
+      padding: 5px 0;
+      margin: 5px 0;
+    }
+
+    .button {
+      width: 100%;
+      background-color: rgb(255, 0, 0);
+      border: none;
+      border-radius: 8px;
+      margin: 10px 0;
+      padding: 10px 0;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body style="display: flex; flex-direction: column; margin: 0 auto; background-color: #ffdede">
+
+    <nav style="margin: 0;" aria-label="breadcrumb" class="main-breadcrumb mx-2 my-2">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active">Login</a></li>
+      </ol>
+    </nav>
+
+
+  <div style="display: flex; flex-direction: column; margin: 260px auto; background-color: white; padding: 20px 40px; border-radius: 16px;">
+    <h1 style="text-align: center;">Login</h1>
+    <form action="http://localhost:3000/logar" method="POST">
+      Usuário: <input type="text" name="usuario" /><br />
+      Senha: <input type="password" name="senha" style="margin-left: 10px;" /><br>
+      <input type="submit" class="button" value="Enviar">
+    </form>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
