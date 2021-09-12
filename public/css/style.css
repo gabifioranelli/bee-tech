@@ -7,13 +7,13 @@
 }
 
 #cabecalho {
-  background-color: #effd85;
+  background-color: #ff5656;
 }
 
 .botoesHeader {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: flex-end;
 }
 
@@ -22,13 +22,10 @@
   margin: 0;
 }
 
-.logo {
-  width: 50%;
-}
-
 .logo1 {
-  width: 18%;
+  width: 19%;
   padding-right: 100px;
+  margin-left: 85px;
 }
 
 .marca {
@@ -38,24 +35,24 @@
   font-size: xxx-large;
   font-weight: 100;
   text-decoration: overline underline;
-  text-decoration-color: #e47599;
-  color: rgb(94, 94, 94);
+  text-decoration-color: #6c6c6c;
+  color: rgb(0 0 0);
 }
 
 .nav {
-  background-color: #e4ff1a;
-  border-bottom: #e47599 solid 2px;
+  background-color: #939393;
+  border-bottom: #dd0000 solid 2px;
 }
 
 .nav a {
-  color: rgb(94, 94, 94);
+  color: rgb(0 0 0);
 }
 
 .nav a:hover {
   font-weight: bold;
   color: white;
   text-decoration: none;
-  background-color: #e47599;
+  background-color: #ff0000;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link
@@ -63,8 +60,6 @@
   background-color: #e47599;
   color: white;
 }
-
-
 
 .dropdown-menu {
   left: 30%;
@@ -156,8 +151,8 @@ footer {
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  border-top: #e47599 solid;
-  background-color: #effd85;
+  border-top: #dd0000 solid 2px;
+  background-color: #ff5656;
 }
 
 footer h2 {
@@ -170,12 +165,12 @@ footer li {
 
 footer a{
   text-decoration: none;
-  color: rgb(94, 94, 94);
+  color: rgb(0, 0, 0);
 }
 
 footer a:hover{
   font-weight: bold;
-  color: rgb(78, 78, 78);
+  color: rgb(59, 59, 59);
   text-decoration: none;
 }
 
@@ -194,7 +189,11 @@ footer a:hover{
   display: grid;
   grid-area: logo;
   justify-content: center;
-  margin-left: 100px;
+  margin-left: 70px;
+}
+
+.imgFooter {
+  width: 55%;
 }
 
 .categorias { 

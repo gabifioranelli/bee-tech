@@ -1,14 +1,5 @@
 const Usuario = require("../models/cadastro-model");
 
-exports.listar_usuario = (req, res) => {
-  Usuario.find({}, (err, usuario) => {
-    if(err) {
-      return res.status(500).send("erro ao consultar");
-    }
-    res.render("views/pages/home", { listar_usuario: usuario });
-  });
-};
-
 exports.cadastrar_usuario_get = (req, res) => {
   res.render("views/pages/cadastro");
 };

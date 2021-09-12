@@ -1,0 +1,62 @@
+<%- include("../partials/header"); %>
+  <main>
+    <h2 class="text-center mt-5">Cadastre-se aqui</h2>
+    <form class="formCadastro container px-5" action="/cadastrarUsuario" method="POST">
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputName ">Nome</label>
+          <input type="text" class="form-control mb-3" id="inputName" placeholder="Nome completo">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputAddress2">CPF</label>
+          <input type="text" class="form-control mb-3" id="inputAddress2" placeholder="Somente números">
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control mb-3" id="inputEmail4" placeholder="Email" data-email>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="inputPassword">Senha</label>
+          <input type="password" class="form-control mb-3" id="inputPassword" placeholder="Senha" data-password="confirmPassword">
+        </div>
+        <div class="form-group col-md-12 mb-3">
+          <label for="confirmPassword">Confirmar Senha</label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Confimar senha">
+        </div>
+      </div>
+      <div class="form-check">
+        Escolha uma opção
+        <div class="form-check mt-2">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Pessoa Física
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Pessoa Jurídica
+          </label>
+        </div>
+      </div>
+      <div class="form-group mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Concordo com os termos e condições
+          </label>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="botaoCadastro btn btn-danger rounded mt-3">Cadastrar</button>
+      </div>
+      <div id="login">
+        <p class="text-center mt-5">Já é cadastrado? Então faça seu <a id="buttonLogin" href="../paginas/login.html">Login</a></p>
+      </div>
+    </form>
+
+  </main>
+
+
+</body>
+<%- include("../partials/footer"); %>
