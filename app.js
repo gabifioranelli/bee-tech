@@ -1,9 +1,12 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 const mongoose = require("mongoose");
 
@@ -24,21 +27,21 @@ app.get('/cadastro', function(req, res) {
     res.render('pages/cadastro');
 });
 
-// app.post = (req, res) => {
-//   let salvar_usuario = new Usuario();
+app.post('/cadastrarUsuario', (req, res) => {
+  let salvar_usuario = new Usuario();
 
-//   salvar_usuario.nome = req.body.nome;
-//   salvar_usuario.cpf = req.body.cpf;
-//   salvar_usuario.email = req.body.email;
-//   salvar_usuario.senha = req.body.senha;
+  salvar_usuario.nome = req.body.nome;
+  salvar_usuario.cpf = req.body.cpf;
+  salvar_usuario.email = req.body.email;
+  salvar_usuario.senha = req.body.senha;
 
-//   salvar_usuario.save(err => {
-//     if(err) {
-//       return res.status(500).send("Erro ao cadastrar");
-//     }
-//     return res.redirect("/");
-//   });
-// };
+  salvar_usuario.save(err => {
+    if(err) {
+      return res.status(500).send("Erro ao cadastrar");
+    }
+    return res.redirect("/");
+  });
+});
 
 app.get('/login', function (req, res) {
   res.render('pages/login');
@@ -61,21 +64,6 @@ app.post('/logar', function (req, res) {
 app.get('/usuario', function (req, res) {
   res.render('pages/usuario');
 });
-
-// app.post("/cadastrarProdutos", (req, res) => {
-//   let produto = new Produtos(); //criando um objeto do tipo Produtos
-
-//   produto.nome = req.body.nome;
-//   produto.vlUnit = req.body.valor;
-//   produto.codigoBarras = req.body.codigo;
-
-//   produto.save((err) => {
-//     if(err) {
-//       return res.status(500).send("Erro ao cadastrar");
-//     }
-//     return res.redirect("/produtos");
-//   });
-// });
 
 app.listen(port, () => {
   console.log("servidor rodando na porta", port);

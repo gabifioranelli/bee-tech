@@ -85,28 +85,6 @@ header .overlay {
   color: rgb(0 0 0);
 }
 
-.nav {
-  background-color: #939393;
-  border-bottom: #dd0000 solid 2px;
-}
-
-.nav a {
-  color: rgb(0 0 0);
-}
-
-.nav a:hover {
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  background-color: #ff0000;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link
-{
-  background-color: #e47599;
-  color: white;
-}
-
 .dropdown-menu {
   left: 30%;
 }
