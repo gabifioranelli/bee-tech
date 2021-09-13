@@ -56,12 +56,12 @@ header .overlay {
   background-color: #ff5656;
 }
 
-.botoesHeader {
+/* .botoesHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-end;
-}
+} */
 
 #cabecalho .row div {
   padding: 0;
@@ -113,6 +113,14 @@ header .overlay {
 
 #corpoSite {
  background-color: #f6f7f1;
+}
+
+.noticiaBanner {
+  background-color: #efe2b8;
+  margin-top: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 70px;
 }
 
 .seta {
