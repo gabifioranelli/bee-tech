@@ -39,7 +39,7 @@ app.post('/cadastrarUsuario', (req, res) => {
     if(err) {
       return res.status(500).send("Erro ao cadastrar");
     }
-    return res.redirect("/");
+    return res.redirect("/usuario");
   });
 });
 
@@ -52,10 +52,15 @@ app.post('/logar', function (req, res) {
   let senha = req.body.senha;
 
   if (
-    (usuario == 'adm' && senha == '123') ||
     (usuario == 'visitante' && senha == '123')
   ) {
-    res.send('Seja bem vindo' + usuario);
+    res.redirect('/usuario');
+  }
+
+  else if (
+    (usuario == 'adm' && senha == '123')
+  ) {
+    res.render('pages/adm');
   } else {
     res.send('Credenciais inválidas!');
   }
